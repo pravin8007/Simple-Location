@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-size: larger;
+            font-weight: 600;
+        }
+        .txt{
+            display: flex;
+            flex-direction: row;
+        }
+        button{
+            padding: 5px;
+            margin-top: 10px;
+            border: 1px solid blueviolet;
+            background-color: aqua;
+        }
+    </style>
+    <title>GeoLocation</title>
+</head>
+<body>
+   <div class="txt"> Latitude : &nbsp; <div id="Latitude"> </div></div>
+   <div class="txt"> Longitude : &nbsp; <div id="Longitude"> </div></div>
+    <button onclick="GeoLoc()">Start Walking</button>
+    <button onclick="stop()">Stop Walking</button>
+    <script src="script.js"></script>
+</body>
+</html>
