@@ -4,12 +4,13 @@ const latitude = document.getElementById('Latitude');
 let timer;
 
 function GeoLoc(){
-  navigator.geolocation.getCurrentPosition((data) =>{
+  navigator.geolocation.watchPosition((data) =>{
     console.log(data);
-    timer = setInterval(() => {
-    ShowPosition(data);
-  },1000);
-  } );
+    ShowPosition(data)
+  //   timer = setInterval(() => {
+  //   // ShowPosition(data);
+  // },1000);
+  });
 }
 
 function ShowPosition(position){
@@ -20,6 +21,12 @@ function ShowPosition(position){
 
     longitude.innerText = " ";
     longitude.innerText = position.coords.longitude;
+
+  //   let latlon = position.coords.latitude + "," + position.coords.longitude;
+
+  // let img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
+
+  // document.getElementById("mapholder").innerHTML = "<img src='${img_url}'>";
 }
 
 function stop(){
